@@ -1,4 +1,4 @@
-class Auteur{
+/*class Auteur{
     String nomAuteur;
     boolean prime;
 
@@ -69,7 +69,7 @@ class Exemplaire{
     public String toString(){
         return "Un exemplaire de "+this.titreOeuvre+", "+this.nomAuteur+", en "+this.langueOeuvre+"";
     }
-}
+}*/
 
 class Bibliotheque{
     String nomBibliotheque;

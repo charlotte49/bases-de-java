@@ -1,20 +1,19 @@
 package TP5POO;
 
 public class Oeuvre {
-
     String titreOeuvre;
-    String refAuteur;
+    Auteur Auteur;
     String langueOeuvre;
 
-    public Oeuvre(String titreOeuvre, String refAuteur, String langueOeuvre){
+    public Oeuvre(String titreOeuvre, Auteur Auteur, String langueOeuvre){
         this.titreOeuvre = titreOeuvre;
-        this.refAuteur = refAuteur;
+        this.Auteur = Auteur;
         this.langueOeuvre = langueOeuvre;
     }
 
-    public Oeuvre(String titre, String nomAuteur){
+    public Oeuvre(String titreOeuvre, Auteur Auteur){
         this.titreOeuvre = titreOeuvre;
-        this.refAuteur = refAuteur;
+        this.Auteur = Auteur;
         this.langueOeuvre = "français";
     }
 
@@ -22,8 +21,8 @@ public class Oeuvre {
         return titreOeuvre;
     }
 
-    public String getAuteur(){
-        return refAuteur;
+    public Auteur getAuteur(){
+        return Auteur;
     }
 
     public String getLangue(){
@@ -31,6 +30,6 @@ public class Oeuvre {
     }
 
     public String toString(){
-        return ""+this.titreOeuvre+", "+this.refAuteur+", en "+this.langueOeuvre+"";
+        return ""+this.titreOeuvre+", "+this.Auteur+", en "+this.langueOeuvre+"";
     }
 }

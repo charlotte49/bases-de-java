@@ -1,23 +1,23 @@
 package TP5POO;
 
 public class Exemplaire {
+    Oeuvre Oeuvre;
 
-    String refOeuvre;
-
-    public Exemplaire(String refOeuvre){
-        System.out.println("Nouvel exemplaire ->"+this.titreOeuvre+", "+this.nomAuteur+", en "+this.langueOeuvre+"\n");
+    public Exemplaire(Oeuvre Oeuvre){
+        this.Oeuvre = Oeuvre;
+        System.out.println("Nouvel exemplaire ->"+this.Oeuvre+"\n");
     }
 
     public Exemplaire (Exemplaire exemp){
-        refOeuvre = exemp.refOeuvre;
-        System.out.println("Copie d'un exemplaire de ->"+this.titreOeuvre+", "+this.nomAuteur+", en "+this.langueOeuvre+"\n");
+        Oeuvre = exemp.Oeuvre;
+        System.out.println("Copie d'un exemplaire de ->"+this.Oeuvre+"\n");
     }
 
-    public String getOeuvre(){
-        return refOeuvre;
+    public Oeuvre getOeuvre(){
+        return Oeuvre;
     }
 
     public String toString(){
-        return "Un exemplaire de "+this.titreOeuvre+", "+this.nomAuteur+", en "+this.langueOeuvre+"";
+        return "Un exemplaire de "+this.Oeuvre+"";
     }
 }

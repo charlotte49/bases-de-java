@@ -37,21 +37,23 @@ class Souris{
         return clonee? "Une souris "+this.couleur+",clonée, de "+this.age+" mois et pesant "+this.poids+" grammes":"Une souris "+this.couleur+" de "+this.age+" mois et pesant "+this.poids+" grammes";
     }
 
-    public void vieillir(int age){
+    public void vieillir(){
         this.age = age +1;
-        if (clonee == true && age > 14) {
+        if (clonee == true && age > (2*ESPERANCE_VIE_DEFAUT)/5) {
             this.couleur = "verte";
         }
     }
 
     public void evolue(){
-        if (clonee == true) {
+        while (this.age < this.esperanceVie){
+            vieillir();
+        }
+        /*if (clonee == true) {
             this.age = (4*ESPERANCE_VIE_DEFAUT)/5;
-            this.couleur = "verte";
         }
         else if (clonee == false){
             this.age = ESPERANCE_VIE_DEFAUT;
-        }
+        }*/
     }
 }
 
@@ -60,7 +62,7 @@ public class TP4POO {
         Souris s1 = new Souris(50,"blanche");
         Souris s2 = new Souris(45, "grise");
         Souris sour2 = new Souris(s2);
-        s1.vieillir(1);
+        s1.vieillir();
         System.out.println(s1);
         System.out.println(s2);
         System.out.println(sour2);

@@ -1,7 +1,6 @@
 package TP5POO;
 
 public class Auteur {
-
     String nomAuteur;
     boolean prime;
 
